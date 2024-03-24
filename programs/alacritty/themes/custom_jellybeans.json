@@ -1,0 +1,28 @@
+{
+   "colors": {
+      "primary": {
+         "background": "0x161616",
+         "foreground": "0xe4e4e4"
+      },
+      "normal": {
+         "black": "0xa3a3a3",
+         "red": "0xe98885",
+         "green": "0xa3c38b",
+         "yellow": "0xffc68d",
+         "blue": "0xa6cae2",
+         "magenta": "0xe7cdfb",
+         "cyan": "0x00a69f",
+         "white": "0xe4e4e4"
+      },
+      "bright": {
+         "black": "0xc8c8c8",
+         "red": "0xffb2b0",
+         "green": "0xc8e2b9",
+         "yellow": "0xffe1af",
+         "blue": "0xbddff7",
+         "magenta": "0xfce2ff",
+         "cyan": "0x0bbdb6",
+         "white": "0xfeffff"
+      }
+   }
+}
