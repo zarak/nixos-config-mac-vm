@@ -36,6 +36,16 @@
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
+  fonts.fonts = with pkgs; [
+    (nerdfonts.override { fonts = [ "Iosevka" "FiraCode" "Hack" "Mononoki" "DroidSansMono" ]; })
+    material-icons
+    fantasque-sans-mono
+    noto-fonts
+    ipafont
+    fira-code
+    fira-code-symbols
+  ];
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
