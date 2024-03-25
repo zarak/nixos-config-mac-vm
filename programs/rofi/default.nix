@@ -9,5 +9,10 @@
     extraConfig = {
       modi = "window,run,ssh,file-browser,file-browser-extended";
     };
+
+    home.file.".local/share/rofi/themes/shared" = {
+      recursive = true;
+      source = ./shared;
+    };
   };
 }
