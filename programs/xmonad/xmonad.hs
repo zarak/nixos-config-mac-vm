@@ -64,7 +64,7 @@ instance UrgencyHook LibNotifyUrgencyHook where
 
 mkRofiCommand :: Folder -> String
 mkRofiCommand folder =
-  "rofi -modi filebrowser -show filebrowser -file-browser-dir '~/" <> show folder <> "' -file-browser-depth 3 -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"
+  "rofi -modi filebrowser -show filebrowser -file-browser-dir '~/" <> show folder <> "' -file-browser-depth 3"
 
 -- rofiBooksCommand = "rofi -modi file-browser -show file-browser -file-browser-dir '~/Books' -file-browser-depth 3 -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"
 
@@ -147,7 +147,8 @@ myAdditionalKeys =
   -- launch a terminal
   [ ("M-S-<Return>", spawn myTerminal),
     -- launcher
-    ("M-p", spawn "rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"),
+    -- ("M-p", spawn "rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"),
+    ("M-p", spawn "rofi -no-lazy-grab -show drun -modi drun"),
     -- close focused window
     ("M-S-c", kill),
     -- Rotate through the available layout algorithms
@@ -443,7 +444,6 @@ myStartupHook myConfig = do
   spawnOnce "nitrogen --restore &"
   spawnOnce "mathpix-snipping-tool &"
   spawnOnce "killall xidlehook; xidlehook --not-when-fullscreen --not-when-audio --timer 600 'xlock -mode blank +description' '' --timer 7200 'systemctl suspend' '' &"
-  spawn "~/.config/polybar/launch.sh --material"
   -- TODO: This doesn't appear to work?
   pure () >> checkKeymap myConfig myAdditionalKeys
 
