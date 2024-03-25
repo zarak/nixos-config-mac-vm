@@ -64,7 +64,7 @@ instance UrgencyHook LibNotifyUrgencyHook where
 
 mkRofiCommand :: Folder -> String
 mkRofiCommand folder =
-  "rofi -modi filebrowser -show filebrowser -file-browser-dir '~/" <> show folder <> "' -file-browser-depth 3"
+  "rofi -dpi 192 -modi filebrowser -show filebrowser -file-browser-dir '~/" <> show folder <> "' -file-browser-depth 3"
 
 -- rofiBooksCommand = "rofi -modi file-browser -show file-browser -file-browser-dir '~/Books' -file-browser-depth 3 -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"
 
@@ -148,7 +148,7 @@ myAdditionalKeys =
   [ ("M-S-<Return>", spawn myTerminal),
     -- launcher
     -- ("M-p", spawn "rofi -no-lazy-grab -show drun -modi drun -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"),
-    ("M-p", spawn "rofi -no-lazy-grab -show drun -modi drun"),
+    ("M-p", spawn "rofi -no-lazy-grab -show drun -modi drun -dpi 192"),
     -- close focused window
     ("M-S-c", kill),
     -- Rotate through the available layout algorithms
