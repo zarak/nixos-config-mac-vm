@@ -199,7 +199,7 @@ in
     ./programs/starship/default.nix
     ./programs/tmux/default.nix
     ./programs/xmonad/default.nix
-    ./programs/autorandr/default.nix
+    # ./programs/autorandr/default.nix
     # ./programs/zathura/default.nix
     ./programs/wezterm/default.nix
     # ./programs/helix/default.nix
@@ -223,8 +223,6 @@ in
     ++ linuxPkgs
     ++ texPkgs
     ++ ocamlPkgs;
-
-  services.autorandr.enable = true;
 
   xsession.numlock.enable = true;
 
