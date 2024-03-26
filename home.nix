@@ -48,10 +48,12 @@ let
     gdb # GNU project debugger
     gh # github cli
     # ghidra # reverse engineering tools
+    gibo
     # gimp # gnu image manipulation program
     # gist # upload code to github as a gist
     gnumake # generate executables from source
     gparted
+    htop
     httpie # command line HTTP client
     http-prompt # interactive command-line HTTP client
     # hugo # static site generator
@@ -109,6 +111,7 @@ let
     shellcheck
     sioyek # pdf reader
     speedtest-cli # test internet bandwidth
+    sqlite
     # termonad # terminal emulator
     tor
     torsocks
