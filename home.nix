@@ -186,7 +186,7 @@ in
 
 
   imports = [
-    ./programs/alacritty/default.nix
+    # ./programs/alacritty/default.nix
     ./programs/fish/default.nix
     ./programs/git/default.nix
     ./programs/neovim/default.nix
@@ -196,9 +196,9 @@ in
     ./programs/tmux/default.nix
     ./programs/xmonad/default.nix
     ./programs/autorandr/default.nix
-    ./programs/zathura/default.nix
+    # ./programs/zathura/default.nix
     ./programs/wezterm/default.nix
-    ./programs/helix/default.nix
+    # ./programs/helix/default.nix
     ./services/dunst/default.nix
     # ./services/picom/default.nix
     ./services/udiskie/default.nix
