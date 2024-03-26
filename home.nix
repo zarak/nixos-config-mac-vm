@@ -203,7 +203,7 @@ in
     ./programs/tmux/default.nix
     ./programs/xmonad/default.nix
     # ./programs/autorandr/default.nix
-    # ./programs/zathura/default.nix
+    ./programs/zathura/default.nix
     ./programs/wezterm/default.nix
     # ./programs/helix/default.nix
     ./services/dunst/default.nix
