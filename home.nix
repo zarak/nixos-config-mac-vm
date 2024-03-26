@@ -36,19 +36,19 @@ let
     # dropbox # Cloud file storage
     dunst # lightweight notification daemon
     elan # manage installatinos of lean theorem prover
-    element-desktop # matrix client
+    # element-desktop # matrix client
     emacs # extensible text editor
     eza # a modern replacement for ls
     exercism # programming puzzles
     # fceux # nintendo emulator and debugger
     ffmpeg
     fh # flakehub
-    flameshot # screenshots with annotations
+    # flameshot # screenshots with annotations
     # gcc                              # C compiler
     gdb # GNU project debugger
     gh # github cli
     # ghidra # reverse engineering tools
-    gimp # gnu image manipulation program
+    # gimp # gnu image manipulation program
     # gist # upload code to github as a gist
     gnumake # generate executables from source
     gparted
@@ -77,7 +77,7 @@ let
     # mathlibtools # math library for lean
     # minecraft
     # mplayer # media player
-    mpv # command line media player
+    # mpv # command line media player
     # musescore # music composition and notation
     ncdu # improved du
     neofetch # system information
@@ -97,8 +97,8 @@ let
     pgcli # postgres cli with auto-completion 
     prettyping # improved ping
     pscid # purescript filewatcher (like ghcid)
-    qalculate-gtk # desktop calculator
-    qbittorrent # bittorrent client
+    # qalculate-gtk # desktop calculator
+    # qbittorrent # bittorrent client
     racket # a programmable programming language
     # reaper                           # Reaper DAW
     redis # command line for redis
@@ -119,7 +119,7 @@ let
     unzip # decompress zip files
     vieb # vim inspired electron browser
     wezterm # gpu based terminal
-    wireshark # network protocol analyzer
+    # wireshark # network protocol analyzer
     xclip # copy to clipboard
     xfce.xfce4-taskmanager # easy to use GUI task manager
     xorg.xdpyinfo # get screen resolution
@@ -200,7 +200,7 @@ in
     ./programs/wezterm/default.nix
     ./programs/helix/default.nix
     ./services/dunst/default.nix
-    ./services/picom/default.nix
+    # ./services/picom/default.nix
     ./services/udiskie/default.nix
     # ./services/polybar/default.nix
     # ./services/redshift/default.nix
@@ -238,12 +238,6 @@ in
     };
 
     jq.enable = true;
-
-
-    obs-studio = {
-      enable = true;
-      plugins = [ ];
-    };
 
     ssh = {
       enable = true;
