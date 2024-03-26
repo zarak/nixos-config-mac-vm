@@ -461,6 +461,7 @@ mason_lspconfig.setup_handlers {
 
 -- Add haskell language server manually
 require('lspconfig').hls.setup {
+  filetypes = { 'haskell', 'lhaskell', 'cabal' },
   settings = {
     formattingProvider = 'fourmolu',
   },
