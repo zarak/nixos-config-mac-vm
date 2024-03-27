@@ -41,7 +41,7 @@ import XMonad.ManageHook
 import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.StackSet qualified as W
--- import XMonad.Util.EZConfig
+import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.NamedWindows qualified as W
 import XMonad.Util.Run
