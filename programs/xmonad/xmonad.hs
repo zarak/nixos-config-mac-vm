@@ -24,10 +24,10 @@ import XMonad.Actions.CycleWS
 import XMonad.Actions.GridSelect
 import XMonad.Actions.WithAll (killAll)
 import XMonad.Hooks.DynamicLog
-import XMonad.Hooks.DynamicProperty
 import XMonad.Hooks.EwmhDesktops
 import XMonad.Hooks.FadeInactive (fadeInactiveLogHook)
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.OnPropertyChange
 import XMonad.Hooks.UrgencyHook (UrgencyHook (..), withUrgencyHook)
 import XMonad.Layout.Grid
 import XMonad.Layout.LayoutModifier
