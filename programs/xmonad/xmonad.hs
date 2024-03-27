@@ -41,7 +41,7 @@ import XMonad.ManageHook
 import XMonad.Prompt
 import XMonad.Prompt.Shell
 import XMonad.StackSet qualified as W
-import XMonad.Util.EZConfig
+-- import XMonad.Util.EZConfig
 import XMonad.Util.NamedScratchpad
 import XMonad.Util.NamedWindows qualified as W
 import XMonad.Util.Run
@@ -444,8 +444,9 @@ myStartupHook myConfig = do
   spawnOnce "nitrogen --restore &"
   spawnOnce "mathpix-snipping-tool &"
   spawnOnce "killall xidlehook; xidlehook --not-when-fullscreen --not-when-audio --timer 600 'xlock -mode blank +description' '' --timer 7200 'systemctl suspend' '' &"
-  -- TODO: This doesn't appear to work?
-  pure () >> checkKeymap myConfig myAdditionalKeys
+
+-- TODO: This doesn't appear to work?
+-- pure () >> checkKeymap myConfig myAdditionalKeys
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
