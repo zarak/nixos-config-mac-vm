@@ -33,7 +33,7 @@ in
     environment.systemPackages = [ open-vm-tools ];
 
     systemd.services.vmware = 
-      { description = "VMWare Guest Service"
+      { description = "VMWare Guest Service";
         wantedBy = [ "multi-user.target" ];
         after = [ "display-manager.service" ];
         unitConfig.ConditionVirtualization = "vmware";
