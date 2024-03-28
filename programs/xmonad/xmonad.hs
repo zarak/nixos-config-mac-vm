@@ -71,8 +71,8 @@ mkRofiCommand folder =
 switchWindow = do
   rawWindowList <- runProcessWithInput "wmctrl" ["-l"] ""
   windowNames <- runProcessWithInput "awk" ["{$1=$2=$3=''; print substr($0,4)}"] rawWindowList
-  fzf <- runProcessWithInput "fzf" [] windowNames
-  safeSpawn "wmctrl" ["-a", fzf]
+  print windowNames
+  safeSpawn "wmctrl" ["-a", "$(test | fzf)"]
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
