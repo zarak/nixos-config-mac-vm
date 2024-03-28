@@ -66,7 +66,7 @@ mkRofiCommand :: Folder -> String
 mkRofiCommand folder =
   "rofi -dpi 192 -modi filebrowser -show filebrowser -file-browser-dir '~/" <> show folder <> "' -file-browser-depth 3"
 
-fuzzyWindowFinder = "wmctrl -a \"$(wmctrl -l | awk '{$1=$2=$3=\"\"; print substr($0,4)}' | fzf)\""
+fuzzyWindowFinder = "wmctrl -a \"$(wmctrl -l | awk '{$1=$2=$3=" "; print substr($0,4)}' | fzf)\""
 
 -- rofiBooksCommand = "rofi -modi file-browser -show file-browser -file-browser-dir '~/Books' -file-browser-depth 3 -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"
 
