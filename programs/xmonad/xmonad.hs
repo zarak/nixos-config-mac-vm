@@ -440,7 +440,6 @@ myLogHook = fadeInactiveLogHook 0.9
 -- By default, do nothing.
 myStartupHook myConfig = do
   spawnOnce "dropbox &"
-  spawnOnce "mathpix-snipping-tool &"
 
 -- TODO: This doesn't appear to work?
 -- pure () >> checkKeymap myConfig myAdditionalKeys
