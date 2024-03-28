@@ -2,7 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
+
+let 
+    existing_nameservers = config.networking.nameservers;
+in
 
 {
   imports =
@@ -42,9 +46,7 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  let 
-    existing_nameservers = config.networking.nameservers;
-  in networking.nameservers = lib.mkForce (existing_nameservers ++ [ "1.1.1.1" "8.8.8.8" ]);
+  networking.nameservers = lib.mkForce (existing_nameservers ++ [ "1.1.1.1" "8.8.8.8" ]);
 
   # Set your time zone.
   time.timeZone = "Asia/Karachi";
