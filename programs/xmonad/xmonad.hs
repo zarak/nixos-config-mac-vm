@@ -66,10 +66,13 @@ mkRofiCommand :: Folder -> String
 mkRofiCommand folder =
   "rofi -dpi 192 -modi filebrowser -show filebrowser -file-browser-dir '~/" <> show folder <> "' -file-browser-depth 3"
 
-switchWindow :: String -> String
-switchWindow cmd = "wmctrl -a '" ++ cmd ++ "'"
-
 -- rofiBooksCommand = "rofi -modi file-browser -show file-browser -file-browser-dir '~/Books' -file-browser-depth 3 -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"
+
+switchWindow = do
+  rawWindowList <- runProcessWithInput "wmctrl" ["-l"] ""
+  windowNames <- runProcessWithInput "awk" ["{$1=$2=$3=''; print substr($0,4)}"] rawWindowList
+  fzf <- runProcessWithInput "fzf" [] windowNames
+  runInTerm myTerminal ("wmctrl -a " <> fzf)
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -228,12 +231,10 @@ myAdditionalKeys =
     -- , ("M-a", spawn "anki")
 
     -- GridSelet
-    ("M-g", goToSelected $ gsconfig2 myColorizer),
+    -- ("M-g", goToSelected $ gsconfig2 myColorizer),
     -- Fzf window select
     ( "M-g",
-      spawn $
-        switchWindow
-          "$(wmctrl -l | awk '{$1=$2=$3=\"\"; print substr($0,4)}' | fzf)"
+      switchWindow
     ),
     -- Find a free workspace
     ("M-f", moveTo Next emptyWS),
