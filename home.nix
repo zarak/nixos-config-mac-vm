@@ -264,10 +264,18 @@ in
   };
 
   xresources.properties = {
-    "Xcursor.size" = 16;
+    # Set this below with pointerCursor
+    # "Xcursor.size" = 128;
     "Xft.dpi" = 192;
   };
 
+  # Make cursor not tiny on HiDPI screens
+  home.pointerCursor = {
+    name = "Vanilla-DMZ";
+    package = pkgs.vanilla-dmz;
+    size = 128;
+    x11.enable = true;
+  };
 
   # xdg.configFile = {
   # "nvim/coc-settings.json".text = cocSettings;
