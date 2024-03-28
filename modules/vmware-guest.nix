@@ -1,3 +1,5 @@
+# Source: https://github.com/mitchellh/nixos-config/blob/main/machines/vm-aarch64.nix
+
 # This is based on the official vmware-guest module, but modified
 # for aarch64 to disable certain features and add support. I'm unsure
 # how to upstream this because I just don't use certain features... maybe
