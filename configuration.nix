@@ -42,7 +42,9 @@
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+  let 
+    existing_nameservers = config.networking.nameservers;
+  in networking.nameservers = lib.mkForce (existing_nameservers ++ [ "1.1.1.1" "8.8.8.8" ]);
 
   # Set your time zone.
   time.timeZone = "Asia/Karachi";
