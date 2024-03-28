@@ -125,6 +125,7 @@ let
     unzip # decompress zip files
     vieb # vim inspired electron browser
     wezterm # gpu based terminal
+    wmctrl # for fzf window selection
     # wireshark # network protocol analyzer
     xclip # copy to clipboard
     xfce.xfce4-taskmanager # easy to use GUI task manager
