@@ -33,6 +33,7 @@ let
     # cudnn_8_3_cudatoolkit_11_5
     # dafny # software verification
     # difftastic # diff checker
+    dig
     dmenu # application launcher
     # dropbox # Cloud file storage
     dunst # lightweight notification daemon
