@@ -79,7 +79,6 @@ let
     luaPackages.luarocks # package manager for lua
     manix # search tool for nix module options
     # mathlibtools # math library for lean
-    mathpix-snipping-tool
     # minecraft
     # mplayer # media player
     # mpv # command line media player

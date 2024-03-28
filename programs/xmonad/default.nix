@@ -5,7 +5,6 @@
     enable = true;
     initExtra = ''
       nitrogen --restore &
-      mathpix-snipping-tool &
     '';
 
     windowManager.xmonad = {
