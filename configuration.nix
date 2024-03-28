@@ -8,12 +8,15 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/vmware-guest.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  disabledModules = [ "virtualisation/vmware-guest.nix" ];
+
   virtualisation.vmware.guest.enable = true;
-  virtualisation.vmware.guest.headless = true;
+  # virtualisation.vmware.guest.headless = true;
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
