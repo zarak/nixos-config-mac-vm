@@ -66,8 +66,8 @@ mkRofiCommand :: Folder -> String
 mkRofiCommand folder =
   "rofi -dpi 192 -modi filebrowser -show filebrowser -file-browser-dir '~/" <> show folder <> "' -file-browser-depth 3"
 
-switchWindow :: String -> X ()
-switchWindow cmd = spawn $ "wmctrl -a '" ++ cmd ++ "'"
+switchWindow :: String -> String
+switchWindow cmd = "wmctrl -a '" ++ cmd ++ "'"
 
 -- rofiBooksCommand = "rofi -modi file-browser -show file-browser -file-browser-dir '~/Books' -file-browser-depth 3 -theme ~/.config/polybar/material/scripts/rofi/launcher.rasi"
 
