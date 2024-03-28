@@ -263,8 +263,8 @@ in
   };
 
   xresources.properties = {
-    "Xcursor.size" = 16;
-    "Xft.dpi" = 192;
+    "Xcursor.size" = 20;
+    "Xft.dpi" = 224;
   };
 
 
