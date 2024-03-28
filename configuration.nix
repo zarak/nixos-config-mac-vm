@@ -89,6 +89,8 @@
   services.xserver.autoRepeatDelay = 400;
   services.xserver.autoRepeatInterval = 25;
 
+  services.xserver.resolutions = [{ x = 2880; y = 1800; }];
+
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.options = "eurosign:e,caps:escape";
