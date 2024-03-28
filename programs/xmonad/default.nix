@@ -3,6 +3,9 @@
 {
   xsession = {
     enable = true;
+    initExtra = ''
+      nitrogen --restore &
+    '';
 
     windowManager.xmonad = {
       enable = true;

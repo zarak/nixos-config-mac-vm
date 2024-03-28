@@ -439,11 +439,8 @@ myLogHook = fadeInactiveLogHook 0.9
 --
 -- By default, do nothing.
 myStartupHook myConfig = do
-  spawnOnce "pasystray &"
   spawnOnce "dropbox &"
-  spawnOnce "nitrogen --restore &"
   spawnOnce "mathpix-snipping-tool &"
-  spawnOnce "killall xidlehook; xidlehook --not-when-fullscreen --not-when-audio --timer 600 'xlock -mode blank +description' '' --timer 7200 'systemctl suspend' '' &"
 
 -- TODO: This doesn't appear to work?
 -- pure () >> checkKeymap myConfig myAdditionalKeys
