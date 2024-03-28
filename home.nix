@@ -89,6 +89,7 @@ let
     networkmanager # cli for network management
     networkmanager_dmenu # manage with dmenu
     networkmanagerapplet # gui for network management
+    nitrogen
     # nixFlakes                        # upcoming feature of nix
     nix-prefetch-git # get sha256 hash of git repo
     nmap # network scanner
