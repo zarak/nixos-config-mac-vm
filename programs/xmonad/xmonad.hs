@@ -225,7 +225,10 @@ myAdditionalKeys =
     -- , ("M-a", spawn "anki")
 
     -- GridSelet
-    ("M-g", goToSelected $ gsconfig2 myColorizer),
+    -- ("M-g", goToSelected $ gsconfig2 myColorizer),
+
+    -- Window switcher
+    ("M-g", spawn "rofi -dpi 192 -show window"),
     -- Find a free workspace
     ("M-f", moveTo Next emptyWS),
     -- Run a shell command
