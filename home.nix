@@ -177,8 +177,9 @@ in
   # programs.nushell.enable = true;
   programs.nix-index = {
     enable = true;
-    enableFishIntegration = false;
+    enableFishIntegration = true;
   };
+  programs.command-not-found.enable = false;
 
   # nixpkgs.overlays = [
   #   # (import ./overlays/zoom)
