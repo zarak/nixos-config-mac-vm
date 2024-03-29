@@ -72,7 +72,7 @@ mkRofiCommand folder =
 -- certain contrib modules.
 --
 -- myTerminal = "alacritty"
-myTerminal = "wezterm"
+myTerminal = "wezterm start --always-new-process"
 
 -- GridSelect config
 -- myGSConfig = defaultGSConfig { gs_cellheight = 100, gs_cellwidth = 300, gs_font = "xft:Liberation Mono:size=9" }
@@ -560,7 +560,7 @@ myScratchpads =
     NS "anki" spawnAnki findAnki manageAnki
   ]
   where
-    spawnTerm = myTerminal ++ [r| start --always-new-process -- tmux new-session -A -s scratchpad 'journalctl -f' \; split-window -v \;|]
+    spawnTerm = myTerminal ++ [r| -- tmux new-session -A -s scratchpad 'journalctl -f' \; split-window -v \;|]
     findTerm = title =? "tmux"
     manageTerm = customFloating $ W.RationalRect l t w h
       where
