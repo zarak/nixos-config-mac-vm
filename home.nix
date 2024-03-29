@@ -43,6 +43,7 @@ let
     eza # a modern replacement for ls
     exercism # programming puzzles
     # fceux # nintendo emulator and debugger
+    fd # find entries in the filesystem
     ffmpeg
     fh # flakehub
     # flameshot # screenshots with annotations
