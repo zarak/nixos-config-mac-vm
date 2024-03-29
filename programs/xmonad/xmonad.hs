@@ -218,8 +218,6 @@ myAdditionalKeys =
     -- , ("M-/ d", spawn $ mkRofiCommand Downloads)
     -- , ("M-/ v", spawn $ mkRofiCommand Videos)
 
-    -- Lock screen
-    ("M-S-z", spawn "xlock -mode blank +description"),
     -- Avoid this because of risk of confusing with M-S-a (killall)
     -- Anki
     -- , ("M-a", spawn "anki")
