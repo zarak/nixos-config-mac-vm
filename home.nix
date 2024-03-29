@@ -175,10 +175,10 @@ in
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   # programs.nushell.enable = true;
-  # programs.nix-index = {
-  #   enable = true;
-  #   enableFishIntegration = true;
-  # };
+  programs.nix-index = {
+    enable = true;
+    enableFishIntegration = false;
+  };
 
   # nixpkgs.overlays = [
   #   # (import ./overlays/zoom)
