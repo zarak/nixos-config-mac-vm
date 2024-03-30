@@ -92,9 +92,10 @@ let
     networkmanager_dmenu # manage with dmenu
     networkmanagerapplet # gui for network management
     nitrogen
+    nix-prefetch-git # get sha256 hash of git repo
     nixd # nix language server
     # nixFlakes                        # upcoming feature of nix
-    nix-prefetch-git # get sha256 hash of git repo
+    nix-tree
     nmap # network scanner
     # obsidian                         # knowledge base of markdown files
     # ocaml                            # functional programming language
