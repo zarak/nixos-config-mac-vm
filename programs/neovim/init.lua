@@ -486,6 +486,8 @@ lspconfig.ccls.setup {
 
 require 'lspconfig'.nixd.setup {}
 
+require 'lspconfig'.bashls.setup {}
+
 require 'lspconfig'.lua_ls.setup {
   on_init = function(client)
     local path = client.workspace_folders[1].name

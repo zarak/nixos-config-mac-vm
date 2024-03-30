@@ -15,6 +15,7 @@ let
     arandr # simple GUI for xrandr
     aria2 # lightweight download utility
     awscli # aws command line interface
+    nodePackages.bash-language-server
     bear
     # burpsuite                        # web application security scanner
     # bfg-repo-cleaner                 # Utility to mage files in git cache
