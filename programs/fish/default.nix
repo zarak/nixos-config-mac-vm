@@ -3,8 +3,10 @@
 let
   fzfConfig = ''
     if type rg &> /dev/null
-      export FZF_DEFAULT_COMMAND='rg --files -g "!Library/" -g "!Applications/"'
+      export FZF_DEFAULT_COMMAND='rg --files'
       export FZF_DEFAULT_OPTS='-m --height 50% --border'
+
+      export FZF_ALT_C_OPTS='--walker-skip .git,node_modules,target,Library,Applications'
     end
   '';
 
