@@ -16,11 +16,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-index-database.url = "github:nix-community/nix-index-database";
-    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-index-database.url = "github:nix-community/nix-index-database";
+    # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, nix-index-database, ... }@inputs: {
+  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs: {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem rec {
         system = "aarch64-linux";
@@ -43,7 +43,7 @@
           # so the old configuration file still takes effect
           ./configuration.nix
 
-          nix-index-database.nixosModules.nix-index
+          # nix-index-database.nixosModules.nix-index
 
 	  # Make home-manager a module of nixos so that
 	  # home-manager config will be deployed automatically
