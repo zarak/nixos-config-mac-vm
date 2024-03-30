@@ -213,7 +213,6 @@ in
     # ./programs/helix/default.nix
     ./services/dunst/default.nix
     # ./services/picom/default.nix
-    ./services/udiskie/default.nix
     # ./services/polybar/default.nix
     # ./services/redshift/default.nix
   ];
