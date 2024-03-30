@@ -516,7 +516,7 @@ require 'lspconfig'.lua_ls.setup {
     })
   end,
   settings = {
-    Lua = {}
+    Lua = { diagnostics = { globals = { 'vim' } } }
   }
 }
 
