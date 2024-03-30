@@ -469,7 +469,7 @@ require('lspconfig').hls.setup {
 }
 
 -- Add C language servers
-require 'lspconfig'.clangd.setup {}
+require 'lspconfig'.clangd.setup { on_attach = on_attach }
 
 local lspconfig = require 'lspconfig'
 lspconfig.ccls.setup {
@@ -481,12 +481,13 @@ lspconfig.ccls.setup {
     clang = {
       excludeArgs = { "-frounding-math" },
     },
-  }
+  },
+  on_attach = on_attach
 }
 
-require 'lspconfig'.nixd.setup {}
+require 'lspconfig'.nixd.setup { on_attach = on_attach }
 
-require 'lspconfig'.bashls.setup {}
+require 'lspconfig'.bashls.setup { on_attach = on_attach }
 
 require 'lspconfig'.lua_ls.setup {
   on_init = function(client)
@@ -517,7 +518,8 @@ require 'lspconfig'.lua_ls.setup {
   end,
   settings = {
     Lua = { diagnostics = { globals = { 'vim' } } }
-  }
+  },
+  on_attach = on_attach
 }
 
 -- nvim-cmp setup
