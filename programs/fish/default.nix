@@ -77,6 +77,9 @@ in
 
       # Idris
       idris2 = "rlwrap idris2";
+
+      # Switch to /host/zarak
+      hz = "cd /host/zarak";
     };
 
     shellInit = fishConfig;
