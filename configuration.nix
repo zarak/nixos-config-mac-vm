@@ -11,7 +11,7 @@
       ./modules/vmware-guest.nix
     ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [ "nix-command" "flakes" "repl-flake" ];
 
   disabledModules = [ "virtualisation/vmware-guest.nix" ];
 
