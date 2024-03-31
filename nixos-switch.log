@@ -1,0 +1,17 @@
+activating the configuration...
+<<< /run/current-system
+>>> /nix/store/v12vnacsii5ns4av37zkqpm8yprdxws9-nixos-system-nixos-24.05.20240325.57e6b3a
+No version or selection state changes.
+[0m[K[0m[K[0m[K[K[0m[K[0m[K[0m[K[0m[K[KClosure size: 7160 -> 7160 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
+setting up /etc...
+reloading user units for zarak...
+restarting sysinit-reactivation.target
+up-haskell-project?lastModified=1&narHash=sha256-H1sAuvoA8HP8kIfijGcqupMIjRSoRIPx%2BrI9YfO3Ihk%3D' (1970-01-01)
+warning: Git tree '/home/zarak/nixos-config-mac-vm' is dirty
+building the system configuration...
+warning: Git tree '/home/zarak/nixos-config-mac-vm' is dirty
+warning: updating lock file '/home/zarak/nixos-config-mac-vm/flake.lock':
+• Updated input 'setup-haskell-project':
+    'path:/nix/store/2d3n1q1r5x1grjwm3m9m65xdd12ygfjf-source/scripts/setup-haskell-project?lastModified=1&narHash=sha256-H1sAuvoA8HP8kIfijGcqupMIjRSoRIPx%2BrI9YfO3Ihk%3D' (1970-01-01)
+  → 'path:/nix/store/44wkqf63wzs8bl9qyxdyhw4bq9igw29n-source/scripts/setup-haskell-project?lastModified=1&narHash=sha256-H1sAuvoA8HP8kIfijGcqupMIjRSoRIPx%2BrI9YfO3Ihk%3D' (1970-01-01)
+warning: Git tree '/home/zarak/nixos-config-mac-vm' is dirty
