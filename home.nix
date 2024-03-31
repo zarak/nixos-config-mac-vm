@@ -143,7 +143,7 @@ let
   ];
 
   haskellPkgs = with pkgs.haskellPackages; [
-    cabal-install
+    # cabal-install
     cabal2nix
     fourmolu
     hakyll
