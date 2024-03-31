@@ -53,7 +53,6 @@
     gh # github cli
     # ghidra # reverse engineering tools
     gibo
-    # gimp # gnu image manipulation program
     # gist # upload code to github as a gist
     gnumake # generate executables from source
     gparted
@@ -64,7 +63,6 @@
     # hy                               # lisp dialect embedded in python
     # idris                            # type driven development
     imagemagick # convert digital images
-    # inkscape # vector graphics
     ispell # Spellcheck for emacs
     # jdk                              # java development kit
     # jetbrains.idea-community # IDE for Java
@@ -81,7 +79,6 @@
     luaPackages.luarocks # package manager for lua
     manix # search tool for nix module options
     # mathlibtools # math library for lean
-    # minecraft
     # mplayer # media player
     # mpv # command line media player
     # musescore # music composition and notation

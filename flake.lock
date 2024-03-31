@@ -89,11 +89,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-H1sAuvoA8HP8kIfijGcqupMIjRSoRIPx+rI9YfO3Ihk=",
-        "path": "/nix/store/44wkqf63wzs8bl9qyxdyhw4bq9igw29n-source/scripts/setup-haskell-project",
+        "path": "/nix/store/0d46z61dx53lc3fa1i4z8984pwskgw4r-source/scripts/setup-haskell-project",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/44wkqf63wzs8bl9qyxdyhw4bq9igw29n-source/scripts/setup-haskell-project",
+        "path": "/nix/store/0d46z61dx53lc3fa1i4z8984pwskgw4r-source/scripts/setup-haskell-project",
         "type": "path"
       }
     },
