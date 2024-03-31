@@ -5,7 +5,7 @@
 set -e
 
 # Edit your config
-$EDITOR home.nix
+$EDITOR ~/nixos-config/home.nix
 
 # cd to your config dir
 pushd ~/nixos-config-mac-vm

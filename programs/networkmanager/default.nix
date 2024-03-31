@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   services.network-manager-applet.enable = true;
 
   home.file.".config/networkmanager-dmenu/config.ini".text = ''

@@ -1,9 +1,12 @@
-{ config, pkgs, inputs, ... }:
-
-let
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}: let
   basePkgs = with pkgs; [
     inputs.setup-haskell-project.defaultPackage."${pkgs.system}"
-    (agda.withPackages (p: [ p.standard-library ])) # dependent types
+    (agda.withPackages (p: [p.standard-library])) # dependent types
     # agda-pkg # agda package management
     # alass # subtitle synchronization
     # anki                             # spaced repetition software
@@ -103,7 +106,7 @@ let
     pciutils # utilities like lspci
     pet # snippet manager
     perl536Packages.LatexIndent # format latex code
-    pgcli # postgres cli with auto-completion 
+    pgcli # postgres cli with auto-completion
     prettyping # improved ping
     pscid # purescript filewatcher (like ghcid)
     # qalculate-gtk # desktop calculator
@@ -172,9 +175,7 @@ let
   texPkgs = with pkgs.texlive; [
     combined.scheme-full
   ];
-in
-
-{
+in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   # programs.nushell.enable = true;
@@ -197,7 +198,6 @@ in
   # nixpkgs.config.permittedInsecurePackages = [
   #   "python-2.7.18.6"
   # ];
-
 
   imports = [
     # ./programs/alacritty/default.nix

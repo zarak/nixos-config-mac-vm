@@ -1,8 +1,6 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   config = builtins.readFile ./wezterm.lua;
-in
-{
+in {
   programs.wezterm = {
     enable = true;
 

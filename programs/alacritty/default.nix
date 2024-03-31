@@ -1,15 +1,10 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   colors = import ./wombat.nix;
   # colors = (builtins.fromJSON (builtins.readFile ./themes/custom_jellybeans.json)).colors;
   # colors = (builtins.fromJSON (builtins.readFile ./themes/blood_moon.json)).colors;
   # colors = (builtins.fromJSON (builtins.readFile ./themes/ayu_dark.json)).colors;
   # colors = (builtins.fromJSON (builtins.readFile ./themes/dracula.json)).colors;
-in
-
-{
-
+in {
   programs.alacritty = {
     enable = true;
 
@@ -50,7 +45,7 @@ in
         }
       ];
 
-      shell = { program = "${pkgs.fish}/bin/fish"; };
+      shell = {program = "${pkgs.fish}/bin/fish";};
     };
   };
 }

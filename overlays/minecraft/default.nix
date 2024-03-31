@@ -1,6 +1,4 @@
-self: super:
-
-{
+self: super: {
   minecraft = super.minecraft.overrideAttrs (
     old: rec {
       version = "2.2.3554";

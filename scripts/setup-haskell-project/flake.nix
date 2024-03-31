@@ -4,24 +4,28 @@
 
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system: 
-      let
-        pkgs = import nixpkgs { inherit system; };
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+  }:
+    flake-utils.lib.eachDefaultSystem (
+      system: let
+        pkgs = import nixpkgs {inherit system;};
         scriptName = "setup-haskell-project";
-        script = 
-          (pkgs.writeScriptBin 
-            scriptName 
-            (builtins.readFile ./setup-haskell-project.sh)).overrideAttrs(old: {
-              buildCommand = "${old.buildCommand}\n patchShebangs $out";
-        });
-
+        script =
+          (pkgs.writeScriptBin
+            scriptName
+            (builtins.readFile ./setup-haskell-project.sh))
+          .overrideAttrs (old: {
+            buildCommand = "${old.buildCommand}\n patchShebangs $out";
+          });
       in rec {
         defaultPackage = packages.script;
         packages.script = pkgs.symlinkJoin {
           name = scriptName;
-          paths = [ script ] ++ (with pkgs; [ git gh direnv cabal-install ]);
-          buildInputs = [ pkgs.makeWrapper ];
+          paths = [script] ++ (with pkgs; [git gh direnv cabal-install]);
+          buildInputs = [pkgs.makeWrapper];
           postBuild = "wrapProgram $out/bin/${scriptName} --prefix PATH : $out/bin";
         };
       }

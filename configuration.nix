@@ -1,19 +1,20 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running `nixos-help`).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./modules/vmware-guest.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./modules/vmware-guest.nix
+  ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  disabledModules = [ "virtualisation/vmware-guest.nix" ];
+  disabledModules = ["virtualisation/vmware-guest.nix"];
 
   virtualisation.vmware.guest.enable = true;
   # virtualisation.vmware.guest.headless = true;
@@ -53,8 +54,8 @@
   networking.hostName = "nixos"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
+  networking.nameservers = ["1.1.1.1" "8.8.8.8"];
 
   # Set your time zone.
   time.timeZone = "Asia/Karachi";
@@ -72,7 +73,7 @@
   # };
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "Iosevka" "FiraCode" "Hack" "Mononoki" "DroidSansMono" ]; })
+    (nerdfonts.override {fonts = ["Iosevka" "FiraCode" "Hack" "Mononoki" "DroidSansMono"];})
     material-icons
     fantasque-sans-mono
     noto-fonts
@@ -98,11 +99,16 @@
       haskellPackages.dbus
     ];
   };
-  
+
   services.xserver.autoRepeatDelay = 400;
   services.xserver.autoRepeatInterval = 25;
 
-  services.xserver.resolutions = [{ x = 2880; y = 1800; }];
+  services.xserver.resolutions = [
+    {
+      x = 2880;
+      y = 1800;
+    }
+  ];
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
@@ -121,7 +127,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.zarak = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
     shell = pkgs.fish;
     packages = with pkgs; [
       firefox
@@ -152,7 +158,6 @@
   programs.fish.enable = true;
 
   # List services that you want to enable:
-
 
   nixpkgs.config = {
     allowUnfree = true;
@@ -189,6 +194,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
 }
-

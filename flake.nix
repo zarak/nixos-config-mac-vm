@@ -22,18 +22,19 @@
     setup-haskell-project.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = 
-    { self
-    , nixpkgs
-    , nixpkgs-stable
-    , home-manager
-    , setup-haskell-project
-    , ... 
-    }@inputs: { nixosConfigurations = {
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-stable,
+    home-manager,
+    setup-haskell-project,
+    ...
+  } @ inputs: {
+    nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem rec {
         system = "aarch64-linux";
 
-	specialArgs = {
+        specialArgs = {
           # To use packages from nixpkgs-stable,
           # we configure some parameters for it first
           pkgs-stable = import nixpkgs-stable {
@@ -46,7 +47,7 @@
           };
 
           inherit inputs;
-	};
+        };
 
         modules = [
           # Import the previous configuration.nix we used,
@@ -55,18 +56,18 @@
 
           # nix-index-database.nixosModules.nix-index
 
-	  # Make home-manager a module of nixos so that
-	  # home-manager config will be deployed automatically
-	  # when executing `nixos-rebuild switch`
-	  home-manager.nixosModules.home-manager 
-	  {
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
-	    home-manager.users.zarak = import ./home.nix;
+          # Make home-manager a module of nixos so that
+          # home-manager config will be deployed automatically
+          # when executing `nixos-rebuild switch`
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.zarak = import ./home.nix;
             home-manager.extraSpecialArgs = specialArgs;
-	  }
+          }
         ];
       };
     };
   };
- }
+}

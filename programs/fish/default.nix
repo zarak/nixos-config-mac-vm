@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
-let
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
   fzfConfig = ''
     if type rg &> /dev/null
       export FZF_DEFAULT_COMMAND='rg --files'
@@ -10,35 +13,36 @@ let
     end
   '';
 
-  customPlugins = pkgs.callPackage ./plugins.nix { };
+  customPlugins = pkgs.callPackage ./plugins.nix {};
 
   fenv = {
     name = "foreign-env";
     src = pkgs.fishPlugins.foreign-env.src;
   };
 
-  fishConfig = ''
-    # Disable greeting
-    set fish_greeting
+  fishConfig =
+    ''
+      # Disable greeting
+      set fish_greeting
 
-    fish_vi_key_bindings
+      fish_vi_key_bindings
 
-    # doom emacs
-    # set PATH $PATH:~/.emacs.d/bin
-    fish_add_path ~/.emacs.d/bin
+      # doom emacs
+      # set PATH $PATH:~/.emacs.d/bin
+      fish_add_path ~/.emacs.d/bin
 
-    # set fish_ambiguous_width 1
-    # set fish_emoji_width 1
+      # set fish_ambiguous_width 1
+      # set fish_emoji_width 1
 
-    set fish_right_prompt
+      set fish_right_prompt
 
-    set -Ux WINIT_X11_SCALE_FACTOR 1.0833333333333333
-  '' + fzfConfig;
-in
-{
+      set -Ux WINIT_X11_SCALE_FACTOR 1.0833333333333333
+    ''
+    + fzfConfig;
+in {
   programs.fish = {
     enable = true;
-    plugins = [ fenv ];
+    plugins = [fenv];
     interactiveShellInit = ''
       starship init fish | source
       direnv hook fish | source
@@ -59,14 +63,10 @@ in
       ls = "${pkgs.eza}/bin/eza --group-directories-first";
       l = "${pkgs.eza}/bin/eza -lbF --git --group-directories-first --icons";
       ll = "${pkgs.eza}/bin/eza -lbF --git --group-directories-first --icons";
-      llm =
-        "${pkgs.eza}/bin/eza -lbGd --git --sort=modified --group-directories-first --icons";
-      la =
-        "${pkgs.eza}/bin/eza -lbhHigmuSa --time-style=long-iso --git --color-scale --group-directories-first --icons";
-      lx =
-        "${pkgs.eza}/bin/eza -lbhHigmuSa@ --time-style=long-iso --git --color-scale --group-directories-first --icons";
-      lt =
-        "${pkgs.eza}/bin/eza --tree --level=2 --group-directories-first --icons";
+      llm = "${pkgs.eza}/bin/eza -lbGd --git --sort=modified --group-directories-first --icons";
+      la = "${pkgs.eza}/bin/eza -lbhHigmuSa --time-style=long-iso --git --color-scale --group-directories-first --icons";
+      lx = "${pkgs.eza}/bin/eza -lbhHigmuSa@ --time-style=long-iso --git --color-scale --group-directories-first --icons";
+      lt = "${pkgs.eza}/bin/eza --tree --level=2 --group-directories-first --icons";
 
       # Git
       g = "git";
@@ -86,38 +86,37 @@ in
 
     shellInit = fishConfig;
 
-    functions =
-      {
-        latest_generation = {
-          body = ''
-            command notify-send (home-manager generations | awk 'NR==1{print $1, $2 "\n" "Generation <b>" $5 "</b>"}')
-          '';
-        };
-        fish_title = {
-          body = ''
-            set -q argv[1]; or set argv fish
-            echo (fish_prompt_pwd_dir_length=1 prompt_pwd): $argv;
-          '';
-        };
-
-        prev = {
-          body = ''
-            set line (echo $history[1])
-            pet new $line
-          '';
-        };
-
-        # set_newline = {
-        # body = ''
-        # set fp /home/zarak/.config/nixpkgs/programs/starship/starship.toml
-        # if test $argv = true
-        # command sed -i 's/disabled = true/disabled = false/g' $fp
-        # else
-        # command sed -i 's/disabled = false/disabled = true/g' $fp
-        # end
-        # command home-manager switch
-        # '';
-        # };
+    functions = {
+      latest_generation = {
+        body = ''
+          command notify-send (home-manager generations | awk 'NR==1{print $1, $2 "\n" "Generation <b>" $5 "</b>"}')
+        '';
       };
+      fish_title = {
+        body = ''
+          set -q argv[1]; or set argv fish
+          echo (fish_prompt_pwd_dir_length=1 prompt_pwd): $argv;
+        '';
+      };
+
+      prev = {
+        body = ''
+          set line (echo $history[1])
+          pet new $line
+        '';
+      };
+
+      # set_newline = {
+      # body = ''
+      # set fp /home/zarak/.config/nixpkgs/programs/starship/starship.toml
+      # if test $argv = true
+      # command sed -i 's/disabled = true/disabled = false/g' $fp
+      # else
+      # command sed -i 's/disabled = false/disabled = true/g' $fp
+      # end
+      # command home-manager switch
+      # '';
+      # };
+    };
   };
 }

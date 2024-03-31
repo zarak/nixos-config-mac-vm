@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.autorandr.profiles = {
     "home" = {
       fingerprint = {
@@ -30,7 +32,6 @@
           position = "0x0";
           rate = "60.00";
         };
-
       };
     };
   };
