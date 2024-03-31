@@ -21,7 +21,7 @@
         defaultPackage = packages.script;
         packages.script = pkgs.symlinkJoin {
           name = scriptName;
-          paths = [ script pkgs.cabal ];
+          paths = [ script pkgs.haskellPackages.cabal ];
           buildInputs = [ pkgs.makeWrapper ];
           postBuild = "wrapProgram $out/bin/${scriptName} --prefix PATH : $out/bin";
         };
