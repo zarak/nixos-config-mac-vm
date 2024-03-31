@@ -22,7 +22,6 @@
     bear
     # burpsuite                        # web application security scanner
     # bfg-repo-cleaner                 # Utility to mage files in git cache
-    # blender # 3D modeling software
     cachix # nix binary caching
     # cargo # rust package manager
     # cc65 # c-compiler for 6502 processors
