@@ -88,12 +88,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-fF7Y4WLA0g7bxC6Iifmvo8R5XAQyQU0BLEO7kI8KoRc=",
-        "path": "/nix/store/js6ka94szq9k40zw0l2lpzr76mzsflql-source/scripts/setup-haskell-project",
+        "narHash": "sha256-H1sAuvoA8HP8kIfijGcqupMIjRSoRIPx+rI9YfO3Ihk=",
+        "path": "/nix/store/0a3g40r8z5a3mk5ji7m8aamnv9b8s6y2-source/scripts/setup-haskell-project",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/js6ka94szq9k40zw0l2lpzr76mzsflql-source/scripts/setup-haskell-project",
+        "path": "/nix/store/0a3g40r8z5a3mk5ji7m8aamnv9b8s6y2-source/scripts/setup-haskell-project",
         "type": "path"
       }
     },
