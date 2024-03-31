@@ -18,8 +18,8 @@
 
     # nix-index-database.url = "github:nix-community/nix-index-database";
     # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-    setup-haskell-project.url = "./scripts/setup-haskell-project";
-    setup-haskell-project.inputs.nixpkgs.follows = "nixpkgs";
+    # setup-haskell-project.url = "./scripts/setup-haskell-project";
+    # setup-haskell-project.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -27,7 +27,7 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
-    setup-haskell-project,
+    # setup-haskell-project,
     ...
   } @ inputs: {
     nixosConfigurations = {
