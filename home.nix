@@ -12,8 +12,6 @@
     # anki                             # spaced repetition software
     # anki-bin # spaced repetition software
     # appimage-run # run appimage apps
-    # aseprite # pixel art
-    # (aseprite.override { unfree = true; })
     # audacity
     arandr # simple GUI for xrandr
     aria2 # lightweight download utility
