@@ -20,7 +20,7 @@
         defaultPackage = packages.script;
         packages.script = pkgs.symlinkJoin {
           name = scriptName;
-          paths = [ script pkgs.git pkgs.gh ];
+          paths = [ script ] ++ (with pkgs; [ git gh direnv ]);
           buildInputs = [ pkgs.makeWrapper ];
           postBuild = "wrapProgram $out/bin/${scriptName} --prefix PATH : $out/bin";
         };
