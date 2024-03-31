@@ -13,7 +13,7 @@
           (pkgs.writeScriptBin 
             scriptName 
             (builtins.readFile ./setup-haskell-project.sh)).overrideAttrs(old: {
-              buildCommand = "{old.buildCommand}\n patchShebangs $out";
+              buildCommand = "${old.buildCommand}\n patchShebangs $out";
         });
 
 
@@ -21,7 +21,7 @@
         defaultPackage = packages.script;
         packages.script = pkgs.symlinkJoin {
           name = scriptName;
-          paths = [ script pkgs.haskellPackages.cabal ];
+          paths = [ script ];
           buildInputs = [ pkgs.makeWrapper ];
           postBuild = "wrapProgram $out/bin/${scriptName} --prefix PATH : $out/bin";
         };
