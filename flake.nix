@@ -18,10 +18,18 @@
 
     # nix-index-database.url = "github:nix-community/nix-index-database";
     # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    setup-haskell-project.url = "./scripts/setup-haskell-project";
+    setup-haskell-project.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs: {
-    nixosConfigurations = {
+  outputs = 
+    { self
+    , nixpkgs
+    , nixpkgs-stable
+    , home-manager
+    , setup-haskell-project
+    , ... 
+    }@inputs: { nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem rec {
         system = "aarch64-linux";
 
@@ -36,6 +44,8 @@
             # installation of non-free software.
             config.allowUnfree = true;
           };
+
+          inherit inputs;
 	};
 
         modules = [
@@ -53,6 +63,7 @@
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
 	    home-manager.users.zarak = import ./home.nix;
+            home-manager.extraSpecialArgs = specialArgs;
 	  }
         ];
       };

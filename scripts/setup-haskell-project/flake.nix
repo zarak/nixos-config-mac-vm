@@ -16,12 +16,11 @@
               buildCommand = "${old.buildCommand}\n patchShebangs $out";
         });
 
-
       in rec {
         defaultPackage = packages.script;
         packages.script = pkgs.symlinkJoin {
           name = scriptName;
-          paths = [ script pkgs.cabal-install pkgs.git pkgs.gh ];
+          paths = [ script pkgs.git pkgs.gh ];
           buildInputs = [ pkgs.makeWrapper ];
           postBuild = "wrapProgram $out/bin/${scriptName} --prefix PATH : $out/bin";
         };
