@@ -11,14 +11,13 @@
     # agda-pkg # agda package management
     # alass # subtitle synchronization
     # anki                             # spaced repetition software
-    # anki-bin # spaced repetition software
+    anki-bin # spaced repetition software
     # appimage-run # run appimage apps
     arandr # simple GUI for xrandr
     aria2 # lightweight download utility
     awscli # aws command line interface
     nodePackages.bash-language-server
     bear
-    # burpsuite                        # web application security scanner
     # bfg-repo-cleaner                 # Utility to mage files in git cache
     cachix # nix binary caching
     # cargo # rust package manager
