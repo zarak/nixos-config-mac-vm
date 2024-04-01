@@ -31,7 +31,6 @@
     cmake # cross-platform make system
     coq # proof assistant
 
-    # cudnn_8_3_cudatoolkit_11_5
     # dafny # software verification
     # difftastic # diff checker
     dig
