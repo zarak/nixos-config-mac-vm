@@ -5,7 +5,7 @@
   ...
 }: let
   basePkgs = with pkgs; [
-    # inputs.setup-haskell-project.defaultPackage."${pkgs.system}"
+    inputs.setup-haskell-project.defaultPackage."${pkgs.system}"
     (agda.withPackages (p: [p.standard-library])) # dependent types
     # agda-pkg # agda package management
     # alass # subtitle synchronization

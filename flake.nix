@@ -18,7 +18,10 @@
 
     # nix-index-database.url = "github:nix-community/nix-index-database";
     # nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
-    # setup-haskell-project.url = "./scripts/setup-haskell-project";
+
+    # Prepend path to avoid flake update loop:
+    # https://discourse.nixos.org/t/flake-lockfile-update-loop-when-having-dependent-flakes-in-a-monorepo/27937
+    setup-haskell-project.url = "path:./scripts/setup-haskell-project";
     # setup-haskell-project.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -27,7 +30,7 @@
     nixpkgs,
     nixpkgs-stable,
     home-manager,
-    # setup-haskell-project,
+    setup-haskell-project,
     ...
   } @ inputs: {
     nixosConfigurations = {
