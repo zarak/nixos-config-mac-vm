@@ -1,0 +1,8 @@
+activating the configuration...
+<<< /run/current-system
+>>> /nix/store/i8rs8xr46rjm8mymigr07w32acirla18-nixos-system-nixos-24.05.20240325.57e6b3a
+No version or selection state changes.
+[0m[K[0m[K[0m[K[0m[K[K[0m[K[0m[K[0m[K[KClosure size: 7165 -> 7165 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
+setting up /etc...
+reloading user units for zarak...
+restarting sysinit-reactivation.target
