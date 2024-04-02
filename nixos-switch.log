@@ -1,0 +1,32 @@
+warning: Git tree '/home/zarak/nixos-config-mac-vm' is dirty
+building the system configuration...
+warning: Git tree '/home/zarak/nixos-config-mac-vm' is dirty
+error:
+       … while calling the 'head' builtin
+
+         at /nix/store/161i7cxz0w0raqmrj88z86cj66babp9z-source/lib/attrsets.nix:1541:11:
+
+         1540|         || pred here (elemAt values 1) (head values) then
+         1541|           head values
+             |           ^
+         1542|         else
+
+       … while evaluating the attribute 'value'
+
+         at /nix/store/161i7cxz0w0raqmrj88z86cj66babp9z-source/lib/modules.nix:809:9:
+
+          808|     in warnDeprecation opt //
+          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |         ^
+          810|         inherit (res.defsFinal') highestPrio;
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: undefined variable 'jfkdjf'
+
+       at /nix/store/1vr3kh8b4k6nsz7zlvshf3xqza6wk8b6-source/home.nix:8:5:
+
+            7|   basePkgs = with pkgs; [
+            8|     jfkdjf
+             |     ^
+            9|     inputs.setup-haskell-project.defaultPackage."${pkgs.system}"
