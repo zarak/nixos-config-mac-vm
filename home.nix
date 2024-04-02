@@ -31,13 +31,11 @@
     coq # proof assistant
 
     # dafny # software verification
-    # difftastic # diff checker
     dig
     dmenu # application launcher
     # dropbox # Cloud file storage
     dunst # lightweight notification daemon
     elan # manage installatinos of lean theorem prover
-    # element-desktop # matrix client
     emacs # extensible text editor
     eza # a modern replacement for ls
     exercism # programming puzzles
@@ -90,7 +88,7 @@
     nix-prefetch-git # get sha256 hash of git repo
     nixd # nix language server
     # nixFlakes                        # upcoming feature of nix
-    nix-closure
+    jfkj
     nix-tree
     nmap # network scanner
     # obsidian                         # knowledge base of markdown files
