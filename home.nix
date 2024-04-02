@@ -11,7 +11,7 @@
     # agda-pkg # agda package management
     # alass # subtitle synchronization
     # anki                             # spaced repetition software
-    # anki-bin # spaced repetition software
+    anki-bin # spaced repetition software
     # appimage-run # run appimage apps
     arandr # simple GUI for xrandr
     aria2 # lightweight download utility
