@@ -119,14 +119,19 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-jjMwN/sGui75UNCzLRhAdO3EseiBM+igygowm8Y589s=",
-        "path": "/nix/store/9lqpz64lbpfxyln7zr4y7dchdhm6znlx-source/scripts/rebuild",
-        "type": "path"
+        "dir": "scripts/rebuild",
+        "lastModified": 1712081678,
+        "narHash": "sha256-jpAOSsIs1lGMazKeSRHh+3UYQ3dTXdm5TVm8WPluT7o=",
+        "ref": "refs/heads/main",
+        "rev": "2e3295ab6534661fadfd2bc58880658ec1f2b071",
+        "revCount": 152,
+        "type": "git",
+        "url": "file:///home/zarak/nixos-config-mac-vm?dir=scripts/rebuild"
       },
       "original": {
-        "path": "/nix/store/9lqpz64lbpfxyln7zr4y7dchdhm6znlx-source/scripts/rebuild",
-        "type": "path"
+        "dir": "scripts/rebuild",
+        "type": "git",
+        "url": "file:///home/zarak/nixos-config-mac-vm?dir=scripts/rebuild"
       }
     },
     "root": {
@@ -144,13 +149,13 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-H1sAuvoA8HP8kIfijGcqupMIjRSoRIPx+rI9YfO3Ihk=",
-        "path": "./scripts/setup-haskell-project",
+        "lastModified": 1711948455,
+        "narHash": "sha256-9vqiBuiLP4tfpz7AirO+c4q+PI+bLuHIoIwDf6ZIYhI=",
+        "path": "/home/zarak/nixos-config-mac-vm/scripts/setup-haskell-project",
         "type": "path"
       },
       "original": {
-        "path": "./scripts/setup-haskell-project",
+        "path": "/home/zarak/nixos-config-mac-vm/scripts/setup-haskell-project",
         "type": "path"
       }
     },
