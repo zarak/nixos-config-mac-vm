@@ -18,7 +18,6 @@
     awscli # aws command line interface
     nodePackages.bash-language-server
     bear
-    # bfg-repo-cleaner                 # Utility to mage files in git cache
     cachix # nix binary caching
     # cargo # rust package manager
     # cc65 # c-compiler for 6502 processors
