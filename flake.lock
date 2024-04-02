@@ -121,11 +121,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-qVqzHCuWiPHCq6EOvbFVolXAt54f2D0RP8JfUq7gTlw=",
-        "path": "/nix/store/460yhs4jvv8fj0gm7na4rllggqfjp70m-source/scripts/rebuild",
+        "path": "/nix/store/4kclwfqf54rjvic9w96nqf41ci1f7249-source/scripts/rebuild",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/460yhs4jvv8fj0gm7na4rllggqfjp70m-source/scripts/rebuild",
+        "path": "/nix/store/4kclwfqf54rjvic9w96nqf41ci1f7249-source/scripts/rebuild",
         "type": "path"
       }
     },
