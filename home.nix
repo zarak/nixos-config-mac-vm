@@ -48,7 +48,6 @@
     gh # github cli
     # ghidra # reverse engineering tools
     gibo
-    # gist # upload code to github as a gist
     gnumake # generate executables from source
     htop
     httpie # command line HTTP client
