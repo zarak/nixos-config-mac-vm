@@ -121,11 +121,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-qVqzHCuWiPHCq6EOvbFVolXAt54f2D0RP8JfUq7gTlw=",
-        "path": "/nix/store/4kclwfqf54rjvic9w96nqf41ci1f7249-source/scripts/rebuild",
+        "path": "/nix/store/dw1m938da73ahs0syv59k5n78z1darpg-source/scripts/rebuild",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/4kclwfqf54rjvic9w96nqf41ci1f7249-source/scripts/rebuild",
+        "path": "/nix/store/dw1m938da73ahs0syv59k5n78z1darpg-source/scripts/rebuild",
         "type": "path"
       }
     },

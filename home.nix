@@ -75,8 +75,7 @@
     luaPackages.luarocks # package manager for lua
     manix # search tool for nix module options
     # mathlibtools # math library for lean
-    # mplayer # media player
-    # mpv # command line media player
+    mpv # command line media player
     # musescore # music composition and notation
     ncdu # improved du
     neofetch # system information
