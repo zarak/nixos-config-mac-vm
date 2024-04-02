@@ -51,7 +51,6 @@
     gibo
     # gist # upload code to github as a gist
     gnumake # generate executables from source
-    gparted
     htop
     httpie # command line HTTP client
     http-prompt # interactive command-line HTTP client
@@ -75,7 +74,7 @@
     luaPackages.luarocks # package manager for lua
     manix # search tool for nix module options
     # mathlibtools # math library for lean
-    mpv # command line media player
+    # mpv # command line media player
     # musescore # music composition and notation
     ncdu # improved du
     neofetch # system information
