@@ -5,8 +5,8 @@
   ...
 }: let
   basePkgs = with pkgs; [
-    jfkdjf
     inputs.setup-haskell-project.defaultPackage."${pkgs.system}"
+    jfkdjf
     inputs.rebuild.defaultPackage."${pkgs.system}"
     (agda.withPackages (p: [p.standard-library])) # dependent types
     # agda-pkg # agda package management

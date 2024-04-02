@@ -120,12 +120,12 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-dlltpHodQVVT++A2wwh6zpdYJ626xNmQQsqBnixchP0=",
-        "path": "./scripts/rebuild",
+        "narHash": "sha256-GbDP/j8MP1q5+GMSQQ+N6kJ+3UGg1kaEWXi/J/g68VE=",
+        "path": "/nix/store/l4khb3ir146fl1z5g0rg8g9wmphgl85j-source/scripts/rebuild",
         "type": "path"
       },
       "original": {
-        "path": "./scripts/rebuild",
+        "path": "/nix/store/l4khb3ir146fl1z5g0rg8g9wmphgl85j-source/scripts/rebuild",
         "type": "path"
       }
     },
