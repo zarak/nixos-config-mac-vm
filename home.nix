@@ -88,7 +88,6 @@
     nix-prefetch-git # get sha256 hash of git repo
     nixd # nix language server
     # nixFlakes                        # upcoming feature of nix
-    jfkj
     nix-tree
     nmap # network scanner
     # obsidian                         # knowledge base of markdown files
