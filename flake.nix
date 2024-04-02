@@ -21,9 +21,9 @@
 
     # Prepend path to avoid flake update loop:
     # https://discourse.nixos.org/t/flake-lockfile-update-loop-when-having-dependent-flakes-in-a-monorepo/27937
-    setup-haskell-project.url = "path:./scripts/setup-haskell-project";
+    setup-haskell-project.url = "path:/home/zarak/nixos-config-mac-vm/scripts/setup-haskell-project";
     # setup-haskell-project.inputs.nixpkgs.follows = "nixpkgs";
-    rebuild.url = "./scripts/rebuild";
+    rebuild.url = "/home/zarak/nixos-config-mac-vm/scripts/rebuild";
   };
 
   outputs = {

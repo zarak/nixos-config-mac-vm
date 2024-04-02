@@ -19,7 +19,7 @@
     nodePackages.bash-language-server
     bear
     cachix # nix binary caching
-    # cargo # rust package manager
+    cargo # rust package manager
     # cc65 # c-compiler for 6502 processors
     ccls # c/c++ language server
     clang # C/C++ compiler
