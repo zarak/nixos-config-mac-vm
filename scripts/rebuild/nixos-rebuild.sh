@@ -33,7 +33,7 @@ echo "NixOS Rebuilding..."
 # Get current generation metadata
 current=$(
   nixos-rebuild list-generations \
-  | awk '/current/ { sub(/current/, "", $1); print $1, $2, $3, $4, $5 }'
+  | awk '/current/ { print $1, $3, $4, $5, $6 }'
 )
 
 # Commit all changes with the generation metadata
