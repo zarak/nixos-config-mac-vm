@@ -485,6 +485,8 @@ lspconfig.ccls.setup {
   on_attach = on_attach
 }
 
+require 'lspconfig'.awk_ls.setup { on_attach = on_attach }
+
 require 'lspconfig'.nixd.setup { on_attach = on_attach }
 
 require 'lspconfig'.bashls.setup { on_attach = on_attach }
