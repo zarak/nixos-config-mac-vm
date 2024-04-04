@@ -96,6 +96,7 @@
     pgcli # postgres cli with auto-completion
     prettyping # improved ping
     pscid # purescript filewatcher (like ghcid)
+    python3 # scripting language
     # qalculate-gtk # desktop calculator
     # qbittorrent # bittorrent client
     racket # a programmable programming language
@@ -182,10 +183,6 @@ in {
   # nixpkgs.config = {
   #   allowUnfree = true;
   # };
-
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "python-2.7.18.6"
-  # ];
 
   imports = [
     # ./programs/alacritty/default.nix
