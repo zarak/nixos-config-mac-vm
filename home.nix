@@ -40,6 +40,7 @@
     exercism # programming puzzles
     # fceux # nintendo emulator and debugger
     fd # find entries in the filesystem
+    feedgnuplot
     ffmpeg
     fh # flakehub
     # flameshot # screenshots with annotations
