@@ -49,7 +49,6 @@
     # ghidra # reverse engineering tools
     gibo
     gnumake # generate executables from source
-    gnuplot # plotting
     htop
     httpie # command line HTTP client
     http-prompt # interactive command-line HTTP client
@@ -124,6 +123,7 @@
     xfce.xfce4-taskmanager # easy to use GUI task manager
     xorg.xdpyinfo # get screen resolution
     xxd # convert binary to hex
+    youplot # draw plots on the terminal
     youtube-dl # YouTube video downloader
     yq # convert from YAML to json
   ];
