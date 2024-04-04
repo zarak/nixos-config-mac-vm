@@ -49,6 +49,7 @@
     # ghidra # reverse engineering tools
     gibo
     gnumake # generate executables from source
+    gnuplot # plotting
     htop
     httpie # command line HTTP client
     http-prompt # interactive command-line HTTP client
