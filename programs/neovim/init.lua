@@ -459,6 +459,9 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 --   end,
 -- }
 
+----------------------------------------
+-- Language Servers
+----------------------------------------
 -- Add haskell language server manually
 require('lspconfig').hls.setup {
   filetypes = { 'haskell', 'lhaskell', 'cabal' },
@@ -490,6 +493,8 @@ require 'lspconfig'.awk_ls.setup { on_attach = on_attach }
 require 'lspconfig'.nixd.setup { on_attach = on_attach }
 
 require 'lspconfig'.bashls.setup { on_attach = on_attach }
+
+require 'lspconfig'.phpactor.setup { on_attach = on_attach }
 
 require 'lspconfig'.lua_ls.setup {
   on_init = function(client)
@@ -523,6 +528,7 @@ require 'lspconfig'.lua_ls.setup {
   },
   on_attach = on_attach
 }
+
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
