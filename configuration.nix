@@ -170,9 +170,14 @@
   services.postgresql = {
     enable = true;
     authentication = pkgs.lib.mkOverride 10 ''
-      #type database  DBuser  auth-method
+      # IPv6 localhost connections
+      host    yii2basic     test             ::1/128                 md5
+
+      # IPv4 localhost connections (if needed)
+      host    yii2basic     test             127.0.0.1/32            md5
+
+      # type database  dbuser  auth-method
       local all       all     trust
-      host  yii2basic test    md5
     '';
     # ensureDatabases = [ "zarak" ];
     # ensureUsers = [
