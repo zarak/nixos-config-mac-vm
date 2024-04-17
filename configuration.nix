@@ -172,6 +172,7 @@
     authentication = pkgs.lib.mkOverride 10 ''
       #type database  DBuser  auth-method
       local all       all     trust
+      host  yii2basic test    md5
     '';
     # ensureDatabases = [ "zarak" ];
     # ensureUsers = [
