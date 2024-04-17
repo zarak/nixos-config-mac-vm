@@ -167,6 +167,14 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  services.postgresql = {
+    enable = true;
+    # ensureDatabases = [ "zarak" ];
+    # ensureUsers = [
+    #   { name = "zarak"; ensureDBOwnership = true; }
+    # ];
+  };
+
   # See summary of changes after nixos-rebuild
   # https://chattingdarkly.org/@lhf@fosstodon.org/110661879831891580
   system.activationScripts.diff = {
