@@ -52,6 +52,8 @@
           };
 
           inherit inputs;
+          # For VM specific settings in home-manager
+          isVM = true;
         };
 
         modules = [

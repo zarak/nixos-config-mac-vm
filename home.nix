@@ -1,9 +1,19 @@
 {
   config,
+  lib,
   pkgs,
   inputs,
   ...
 }: let
+  isVM = true;
+
+  servalImports = [
+    ./services/picom/default.nix
+    ./services/polybar/default.nix
+    ./services/redshift/default.nix
+    ./programs/autorandr/default.nix
+  ];
+
   basePkgs = with pkgs; [
     inputs.setup-haskell-project.defaultPackage."${pkgs.system}"
     inputs.rebuild.defaultPackage."${pkgs.system}"
@@ -173,12 +183,12 @@ in {
   #   enableFishIntegration = true;
   # };
 
-  # nixpkgs.overlays = [
+  nixpkgs.overlays = [
   #   # (import ./overlays/zoom)
-  #   (import ./overlays/discord)
+  (if !isVM then import ./overlays/discord else null)
   #   # (import ./overlays/aseprite)
   #   # (import ./overlays/minecraft)
-  # ];
+  ];
 
   # nixpkgs.config = {
   #   allowUnfree = true;
@@ -194,15 +204,12 @@ in {
     ./programs/starship/default.nix
     ./programs/tmux/default.nix
     ./programs/xmonad/default.nix
-    # ./programs/autorandr/default.nix
     ./programs/zathura/default.nix
     ./programs/wezterm/default.nix
     # ./programs/helix/default.nix
     ./services/dunst/default.nix
-    # ./services/picom/default.nix
-    # ./services/polybar/default.nix
-    # ./services/redshift/default.nix
-  ];
+  ] ++ (if !isVM then servalImports else []);
+
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -252,14 +259,13 @@ in {
     };
   };
 
-  xresources.properties = {
-    # Set this below with pointerCursor
-    # "Xcursor.size" = 128;
+  xresources.properties = lib.mkIf isVM {
+    # "Xcursor.size" = 128; Set this below with pointerCursor
     "Xft.dpi" = 192;
   };
 
   # Make cursor not tiny on HiDPI screens
-  home.pointerCursor = {
+  home.pointerCursor = lib.mkIf isVM {
     name = "Vanilla-DMZ";
     package = pkgs.vanilla-dmz;
     size = 128;
