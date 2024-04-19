@@ -207,6 +207,7 @@ in {
     ./programs/xmonad/default.nix
     ./programs/zathura/default.nix
     ./programs/wezterm/default.nix
+    ./programs/mycli/default.nix
     # ./programs/helix/default.nix
     ./services/dunst/default.nix
   ] ++ (if !isVM then servalImports else []);
@@ -279,6 +280,9 @@ in {
 
   # Raw config files
   # home.file.".config/alacritty/alacritty.yml".source=  ./alacritty/alacritty.yml;
+
+  # For mysql command line
+  home.file.".myclirc".source = ./programs/mycli/myclirc;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
