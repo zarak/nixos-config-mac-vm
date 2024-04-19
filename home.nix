@@ -85,6 +85,7 @@
     # mathlibtools # math library for lean
     # mpv # command line media player
     # musescore # music composition and notation
+    mycli # mysql command line interface
     ncdu # improved du
     neofetch # system information
     netlify-cli # CLI for netlify
