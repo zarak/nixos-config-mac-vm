@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   imports = [
@@ -21,7 +22,9 @@
       syntax_style = "default";
       key_bindings = "vi";
       wider_completion_menu = false;
-      prompt = "'\t \u@\h:\d> '";
+      prompt = lib.literalExpression ''
+        '\t \u@\h:\d> '
+      '';
       less_chatty = false;
       login_path_as_host = false;
       auto_vertical_output = false;
