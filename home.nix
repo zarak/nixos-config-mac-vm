@@ -3,9 +3,9 @@
   lib,
   pkgs,
   inputs,
+  isVM,
   ...
 }: let
-  isVM = true;
 
   servalImports = [
     ./services/picom/default.nix
