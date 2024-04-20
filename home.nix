@@ -281,7 +281,7 @@ in {
   # home.file.".config/alacritty/alacritty.yml".source=  ./alacritty/alacritty.yml;
 
   # For mysql command line
-  home.file.".myclirc".source = ./programs/mycli/myclirc.ini;
+  # home.file.".myclirc".source = ./programs/mycli/myclirc.ini;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
