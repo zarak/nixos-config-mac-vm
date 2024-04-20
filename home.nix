@@ -17,6 +17,7 @@
   basePkgs = with pkgs; [
     inputs.setup-haskell-project.defaultPackage."${pkgs.system}"
     inputs.rebuild.defaultPackage."${pkgs.system}"
+
     (agda.withPackages (p: [p.standard-library])) # dependent types
     # agda-pkg # agda package management
     # alass # subtitle synchronization
@@ -272,6 +273,21 @@ in {
     package = pkgs.vanilla-dmz;
     size = 128;
     x11.enable = true;
+  };
+
+  # NixOS has built-in modules to enable 1Password
+  # along with some pre-packaged configuration to make
+  # it work nicely. You can search what options exist
+  # in NixOS at https://search.nixos.org/options
+
+  # Enables the 1Password CLI
+  programs._1password = { enable = true; };
+
+  # Enables the 1Password desktop app
+  programs._1password-gui = {
+  enable = true;
+  # this makes system auth etc. work properly
+  polkitPolicyOwners = [ "<your-linux-username>" ];
   };
 
   # xdg.configFile = {
