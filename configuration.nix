@@ -167,6 +167,11 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  services.mysql = {
+    enable = true;
+    package = pkgs.mariadb;
+  };
+
   services.postgresql = {
     enable = true;
     authentication = pkgs.lib.mkOverride 10 ''
