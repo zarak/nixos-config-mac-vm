@@ -37,8 +37,6 @@
       set fish_right_prompt
 
       set -Ux WINIT_X11_SCALE_FACTOR 1.0833333333333333
-
-      set OP_PLUGIN_ALIASES_SOURCED 1
     ''
     + fzfConfig;
 in {
@@ -84,8 +82,6 @@ in {
 
       # Switch to /host/zarak
       hz = "cd /host/zarak";
-
-      mysql = "op plugin run -- mysql";
     };
 
     shellInit = fishConfig;
