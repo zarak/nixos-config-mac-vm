@@ -22,7 +22,7 @@
       syntax_style = "default";
       key_bindings = "vi";
       wider_completion_menu = false;
-      prompt = lib.literalExpression ''
+      prompt = ''
         '\t \u@\h:\d> '
       '';
       less_chatty = false;
@@ -30,7 +30,9 @@
       auto_vertical_output = false;
       keyword_casing = "auto";
       enable_pager = true;
-      pager = "'vim -'";
+      pager = ''
+      'vim -c "set nowrap"'
+      '';
     };
     extraConfig = builtins.readFile ./myclirc;
   };
