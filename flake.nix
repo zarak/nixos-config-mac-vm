@@ -59,7 +59,9 @@
         modules = [
           # Import the previous configuration.nix we used,
           # so the old configuration file still takes effect
-          ./configuration.nix
+          (if specialArgs.isVM 
+            then ./vm.nix 
+            else ./serval.nix)
 
           # nix-index-database.nixosModules.nix-index
 
