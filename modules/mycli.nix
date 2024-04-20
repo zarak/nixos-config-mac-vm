@@ -45,8 +45,9 @@ in {
   config = lib.mkIf cfg.enable {
     home.packages = [ pkgs.mycli ];
 
-    xdg.configFile."mycli/myclirc".text = lib.concatStringsSep "\n" ([ ]
+    xdg.configFile."mycli/myclirc".text = lib.concatStringsSep "\n" (["# vi: ft=dosini" "[main]" ]
       ++ lib.mapAttrsToList formatLine cfg.settings
-      ++ lib.optional (cfg.extraConfig != "") cfg.extraConfig);
+      ++ lib.optional (cfg.extraConfig != "") cfg.extraConfig
+      );
   };
 }
