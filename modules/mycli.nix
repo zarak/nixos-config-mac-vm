@@ -46,7 +46,7 @@ in {
     home.packages = [ pkgs.mycli ];
 
     xdg.configFile."mycli/myclirc".text = lib.concatStringsSep "\n" ([ ]
-      ++ lib.mapAttrsToList lib.formatLine cfg.settings
+      ++ lib.mapAttrsToList formatLine cfg.settings
       ++ lib.optional (cfg.extraConfig != "") cfg.extraConfig);
   };
 }
