@@ -207,6 +207,7 @@ in {
     ./programs/xmonad/default.nix
     ./programs/zathura/default.nix
     ./programs/wezterm/default.nix
+    ./programs/mycli/default.nix
     # ./programs/helix/default.nix
     ./services/dunst/default.nix
   ] ++ (if !isVM then servalImports else []);
