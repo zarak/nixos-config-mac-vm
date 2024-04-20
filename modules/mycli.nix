@@ -17,7 +17,7 @@ in {
     enable = lib.mkEnableOption "mycli";
 
     settings = lib.mkOption {
-      type = with lib.types; attrsOf (oneOf [ bool str ]);
+      type = with lib.types; attrsOf (oneOf [ bool str lib.literalExpression ]);
       default = { };
       description = ''
         See 
