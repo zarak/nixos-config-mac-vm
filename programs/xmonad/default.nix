@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{pkgs, isVM, ...}: {
   xsession = {
     enable = true;
     initExtra = ''
@@ -19,5 +19,8 @@
     };
   };
 
-  home.file.".xmonad/xmonad.hs".source = ./xmonad.hs;
+  home.file.".xmonad/xmonad.hs".source = 
+    (if isVM 
+      then ./vm-xmonad.hs
+      else ./serval-xmonad.hs);
 }
